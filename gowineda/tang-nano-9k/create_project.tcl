@@ -124,12 +124,15 @@ set project_dir [pwd]
 # --- Importing neorv32 library files ---
 source $script_dir/import_neorv32.tcl
 
-# --- Importing bootloader template file and constraint file ---
+# --- Importing bootloader template file and constraint files ---
 import_files \
   -file $neorv32_dir/rtl/test_setups/neorv32_test_setup_bootloader.vhd \
   {*}$flags_import
 import_files \
   -file $script_dir/tang-nano-9k_test_setup_bootloader.cst \
+  {*}$flags_import
+import_files \
+  -file $script_dir/tang-nano-9k.sdc \
   {*}$flags_import
 
 # --- Modify bootloader template file ---
