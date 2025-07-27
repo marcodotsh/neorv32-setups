@@ -131,6 +131,9 @@ import_files \
 import_files \
   -file $script_dir/tang-nano-20k_test_setup_bootloader.cst \
   {*}$flags_import
+import_files \
+  -file $script_dir/tang-nano-20k.sdc \
+  {*}$flags_import
 
 # --- Modify bootloader template file ---
 set fd [open $project_dir/src/neorv32_test_setup_bootloader.vhd r]
